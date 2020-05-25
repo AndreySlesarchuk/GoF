@@ -1,4 +1,4 @@
-package com.as.gof.behavioral.visitors;
+package com.as.gof.behavioral.visitors.biha;
 
 /**
  * Created by Slesarchuk on 05/25/2020.

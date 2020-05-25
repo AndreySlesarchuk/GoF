@@ -4,7 +4,8 @@ package com.as.gof.behavioral.visitors.animal;
  */
 public class Main {
     public static void main(String[] args) {
-        Animal animal = new Cat();
+        Animal animal = new Dog();
+        animal.accept(new EatVisitor());
         animal.accept(new SoundVisitor());
     }
 }
