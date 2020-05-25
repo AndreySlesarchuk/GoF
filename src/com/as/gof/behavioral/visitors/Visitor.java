@@ -1,7 +1,7 @@
 package com.as.gof.behavioral.visitors;
 
 /**
- * Created by Slesarchuk on 05/25/2020.
+ * Created by Andrey Slesarchuk on 05/25/2020.
  */
 public interface Visitor {
 

@@ -1,8 +1,10 @@
 package com.as.gof.behavioral.visitors.animal;
-
+/**
+ * Created by Andrey Slesarchuk on 05/25/2020.
+ */
 public class Dog implements Animal{
     @Override
-    public void makeSound() {
-        System.out.println("wof");
+    public void accept(AnimalVisitor animalVisitor) {
+        animalVisitor.action(this);
     }
 }
