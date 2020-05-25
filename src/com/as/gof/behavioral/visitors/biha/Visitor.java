@@ -7,7 +7,8 @@ public interface Visitor {
 
     void visit(Employee employee);
 
-    //void visit(Boss boss);
-    //void visit(SuperBoss superBoss);
+    void visit(Head head);
+
+    void visit(Chairman chairman);
 
 }
