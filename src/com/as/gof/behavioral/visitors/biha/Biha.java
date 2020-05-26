@@ -53,15 +53,15 @@ public class Biha {
 
         IncomeVisitor incomeVisitor = new IncomeVisitor();
         biha.chairman.accept(incomeVisitor);
-        System.out.println("super head income = " + incomeVisitor.getChairmanIncome());
-        System.out.println("heades income = " + incomeVisitor.getHeadIncome());
+        System.out.println("chairman income = " + incomeVisitor.getChairmanIncome());
+        System.out.println("heads income = " + incomeVisitor.getHeadIncome());
         System.out.println("employees income = " + incomeVisitor.getEmployeeIncome());
         System.out.println("total income = " + incomeVisitor.getTotalIncome());
 
         PersonnelVisitor personnelVisitor = new PersonnelVisitor();
         biha.chairman.accept(personnelVisitor);
-        System.out.println("super head amount : " + personnelVisitor.getChairmanAmount());
-        System.out.println("heades amount : " + personnelVisitor.getHeadAmount());
+        System.out.println("chairman amount : " + personnelVisitor.getChairmanAmount());
+        System.out.println("heads amount : " + personnelVisitor.getHeadAmount());
         System.out.println("employees amount : " + personnelVisitor.getEmployeeAmount());
         System.out.println("total personnel amount : " + personnelVisitor.getPersonnelAmount());
         System.out.println("personnel " + personnelVisitor.getPersonnel());
