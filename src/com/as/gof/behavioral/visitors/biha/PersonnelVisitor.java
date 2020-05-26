@@ -14,19 +14,19 @@ public class PersonnelVisitor implements Visitor {
     private List<String> personnel = new ArrayList<>();
 
     @Override
-    public void visit(Employee employee) {
+    public void action(Employee employee) {
         employeeAmount++;
         personnel.add( "Employee: " + employee.getName() );
     }
 
     @Override
-    public void visit(Head head) {
+    public void action(Head head) {
         headAmount++;
         personnel.add( "Head: " + head.getName() );
     }
 
     @Override
-    public void visit(Chairman chairman) {
+    public void action(Chairman chairman) {
         chairmanAmount++;
         personnel.add( "Chairman: " + chairman.getName() );
     }

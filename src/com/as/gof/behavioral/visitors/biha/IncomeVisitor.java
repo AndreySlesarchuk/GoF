@@ -8,19 +8,19 @@ public class IncomeVisitor implements Visitor {
     private int employeeIncome;
 
     @Override
-    public void visit(Employee employee){
+    public void action(Employee employee){
         employeeIncome += employee.getSalary() + employee.getIncentiveBonus();
         System.out.println("IncomeVisitor.visit Employee " + employee.getName());
     }
 
     @Override
-    public void visit(Head head){
+    public void action(Head head){
         headIncome += head.getSalary() + head.getAnnualBonus();
         System.out.println("IncomeVisitor.visit Head " + head.getName());
     }
 
     @Override
-    public void visit(Chairman chairman){
+    public void action(Chairman chairman){
         chairmanIncome += chairman.getSalary() + chairman.getAnnualBonus() + chairman.getOptionBonus();
         System.out.println("IncomeVisitor.visit Chairman " + chairman.getName());
     }

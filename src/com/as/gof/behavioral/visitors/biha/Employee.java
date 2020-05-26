@@ -33,7 +33,7 @@ public class Employee {
     }
 
     public void accept (Visitor visitor){
-        visitor.visit(this);
+        visitor.action(this);
     }
 
 }

@@ -15,7 +15,7 @@ public class Chairman extends Head {
 
     @Override
     public void accept (Visitor visitor){
-        visitor.visit(this);
+        visitor.action(this);
         acceptEmployees(visitor);
     }
 }
