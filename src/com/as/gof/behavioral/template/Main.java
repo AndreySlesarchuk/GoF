@@ -4,9 +4,9 @@ package com.as.gof.behavioral.template;
  */
 public class Main {
     public static void main(String[] args) {
-        Bevarage bevarage = new Coffee();
-        bevarage.makeBevarage();
+        Beverage bevarage = new Coffee();
+        bevarage.makeBeverage();
         bevarage = new Tea();
-        bevarage.makeBevarage();
+        bevarage.makeBeverage();
     }
 }

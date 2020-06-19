@@ -2,12 +2,12 @@ package com.as.gof.behavioral.template;
 /**
  * Created by Andrey Slesarchuk on 06/19/2020.
  */
-abstract class Bevarage {
+abstract class Beverage {
 
-  public void makeBevarage() {
+  public void makeBeverage() {
     startHook();
     boilWater();
-    addBevarage();
+    addBeverage();
     addSugar();
     addConditment();
     endHook();
@@ -22,7 +22,7 @@ abstract class Bevarage {
   private void addSugar() {
     System.out.println("add sugar");
   }
-  abstract void addBevarage();
+  abstract void addBeverage();
   abstract void addConditment();
 
 }

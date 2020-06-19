@@ -2,9 +2,9 @@ package com.as.gof.behavioral.template;
 /**
  * Created by Andrey Slesarchuk on 06/19/2020.
  */
-public class Coffee extends Bevarage {
+public class Coffee extends Beverage {
 
-  @Override void addBevarage() {
+  @Override void addBeverage() {
     System.out.println("add coffee");
   }
 
