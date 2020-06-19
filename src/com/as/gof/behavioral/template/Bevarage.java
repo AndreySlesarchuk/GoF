@@ -5,11 +5,16 @@ package com.as.gof.behavioral.template;
 abstract class Bevarage {
 
   public void makeBevarage() {
+    startHook();
     boilWater();
     addBevarage();
     addSugar();
     addConditment();
+    endHook();
   }
+
+  void startHook() {}
+  void endHook() {}
 
   private void boilWater() {
     System.out.println("boiled water");

@@ -11,4 +11,12 @@ public class Coffee extends Bevarage {
   @Override void addConditment() {
     System.out.println("add milk");
   }
+
+  @Override void startHook() {
+    System.out.println("wash the cup");
+  }
+
+  @Override void endHook() {
+    System.out.println("bill");
+  }
 }
