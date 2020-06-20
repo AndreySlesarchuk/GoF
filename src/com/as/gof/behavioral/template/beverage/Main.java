@@ -1,4 +1,5 @@
-package com.as.gof.behavioral.template;
+package com.as.gof.behavioral.template.beverage;
+
 /**
  * Created by Andrey Slesarchuk on 06/19/2020.
  */
