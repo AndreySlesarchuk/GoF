@@ -3,7 +3,7 @@ package com.as.gof.behavioral.template.authorization;
 /**
  * Created by Andrey Slesarchuk on 06/20/2020.
  */
-public class Diges {
+public class Digest {
   private String digest;
 
   private int salt;
