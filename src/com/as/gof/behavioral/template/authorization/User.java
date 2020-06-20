@@ -23,5 +23,5 @@ public class User {
   public void setLoginName(String loginName) {
     this.loginName = loginName;
   }
-  
+
 }
