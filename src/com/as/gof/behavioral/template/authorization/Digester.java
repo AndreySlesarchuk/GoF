@@ -29,7 +29,7 @@ public class Digester {
     return Base64.getEncoder().encodeToString(messageDigest.digest());
   }
 
-  public static boolean validatePassword (String password, String digest, int salt) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+  public static boolean validatePassword(String password, String digest, int salt) throws UnsupportedEncodingException, NoSuchAlgorithmException {
     return calculateDigest(password, salt).equals(digest);
   }
 
