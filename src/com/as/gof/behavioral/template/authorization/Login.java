@@ -1,7 +1,5 @@
 package com.as.gof.behavioral.template.authorization;
 
-import javax.security.auth.login.LoginException;
-
 /**
  * Created by Andrey Slesarchuk on 06/21/2020.
  */
