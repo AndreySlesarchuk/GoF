@@ -5,6 +5,9 @@ import java.security.NoSuchAlgorithmException;
 
 import static com.as.gof.behavioral.template.authorization.LoginResult.*;
 
+/**
+ * Created by Andrey Slesarchuk on 06/27/2020.
+ */
 public class PasswordLogin extends Login {
   private final String loginName;
 
@@ -43,7 +46,6 @@ public class PasswordLogin extends Login {
     else {
       return FAILED;
     }
-
   }
 
   @Override
