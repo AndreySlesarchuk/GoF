@@ -9,9 +9,14 @@ public class Main {
 
   public static void main(String[] args) {
     Subject subject = new Subject();
-    subject.subscribe(new Subscriber1());
+    Subscriber1 myObservable = new Subscriber1();
+    subject.subscribe(myObservable);
+    MyObservable su3 = new Subscriber2();
     subject.subscribe(new Subscriber2());
+    subject.subscribe(su3);
     subject.notifySubscribers("Hello worlds!");
+    subject.unsubscribe(myObservable);
+    subject.notifySubscribers("Hello All!");
   }
 
   interface MyObservable {
