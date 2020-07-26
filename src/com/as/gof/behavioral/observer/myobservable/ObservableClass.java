@@ -15,24 +15,31 @@ public class ObservableClass {
     Observer su3 = new Subscriber2();
     subject.addObserver(new Subscriber2());
     subject.addObserver(su3);
+    subject.setChanged();
     subject.notifyObservers("Hi worlds!");
     subject.deleteObserver(su3);
+    subject.setChanged();
     subject.notifyObservers("Hello All!");
   }
 
-  static class Subject extends Observable {}
-  }
-
-  class Subscriber1 implements Observer {
-    @Override public void update(Observable o, Object arg) {
-        System.out.println("s1 " + arg);
+  static class Subject extends Observable {
+    // changed = true;
+    @Override protected synchronized void setChanged() {
+      super.setChanged();
     }
   }
-
-  class Subscriber2 implements Observer {
-    @Override public void update(Observable o, Object arg) {
-      System.out.println("s2 " + arg);
-    }
-  }
-
 }
+
+class Subscriber1 implements Observer {
+  @Override public void update(Observable o, Object arg) {
+    System.out.println("s1 " + arg);
+  }
+}
+
+class Subscriber2 implements Observer {
+  @Override public void update(Observable o, Object arg) {
+    System.out.println("s2 " + arg);
+  }
+}
+
+
