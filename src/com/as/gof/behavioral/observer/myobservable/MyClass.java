@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Andrey Slesarchuk on 07/26/2020.
  */
-public class Main {
+public class MyClass {
 
   public static void main(String[] args) {
     Subject subject = new Subject();
