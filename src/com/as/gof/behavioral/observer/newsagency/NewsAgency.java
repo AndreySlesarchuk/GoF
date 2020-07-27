@@ -28,4 +28,5 @@ public class NewsAgency {
       channel.update(this.news);
     }
   }
+  
 }

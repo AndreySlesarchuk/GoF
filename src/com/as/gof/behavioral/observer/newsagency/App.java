@@ -13,7 +13,6 @@ public class App {
     observable.addObserver(a1);
     observable.setNews("news");
     //assertEquals(observer.getNews(), "news");
-
   }
 
 }
