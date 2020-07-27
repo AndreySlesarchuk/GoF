@@ -1,7 +1,5 @@
 package com.as.gof.behavioral.observer.newsagency;
 
-import com.as.gof.behavioral.observer.chat.User;
-
 import java.util.logging.Logger;
 
 /**
