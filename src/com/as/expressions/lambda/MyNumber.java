@@ -1,14 +1,14 @@
 package com.as.expressions.lambda;
 
-public class Main {
+public class MyNumber {
   public static void main(String[] args) {
-    MyNumber myNumber1 = (i) -> i*5;
+    ExpNumber myNumber1 = (i) -> i * 5;
     System.out.println(myNumber1.someNum(2));
-    MyNumber myNumber2 = (i) -> i*10;
+    ExpNumber myNumber2 = (i) -> i * 10;
     System.out.println(myNumber2.someNum(2));
   }
 }
 
-interface  MyNumber {
+interface  ExpNumber {
   int someNum(int i);
 }
