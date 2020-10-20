@@ -10,16 +10,16 @@ import org.apache.log4j.Logger;
 
 public class MyNumber {
 
-  private static final Logger logger = Logger.getLogger(MyNumber.class);
+  static Logger log = Logger.getLogger(MyNumber.class);
 
   public static void main(String[] args) {
-    BasicConfigurator.configure();
+    //BasicConfigurator.configure();
     Consumer<Object> myMethod = n -> {
       if (n instanceof Integer) {
-        logger.info("And this number - " + n + "!");
+        log.info("And this number - " + n + "!");
       }
       else {
-        logger.info("Hello Word and " + n + "!");
+        log.info("Hello Word and " + n + "!");
         return;
       }
     };
