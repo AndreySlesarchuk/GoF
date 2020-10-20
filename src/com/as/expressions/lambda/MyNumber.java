@@ -1,7 +1,6 @@
 package com.as.expressions.lambda;
 
 import java.util.function.Consumer;
-
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -18,7 +17,8 @@ public class MyNumber {
     Consumer<Object> myMethod = n -> {
       if (n instanceof Integer) {
         logger.info("And this number - " + n + "!");
-      } else {
+      }
+      else {
         logger.info("Hello Word and " + n + "!");
         return;
       }
