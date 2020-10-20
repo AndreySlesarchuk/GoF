@@ -2,17 +2,24 @@ package com.as.expressions.lambda;
 
 import java.util.function.Consumer;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
 /**
  * Created by Slesarchuk on 10/19/2020.
  */
-public class MyNumber {
-  public static void main(String[] args) {
 
+public class MyNumber {
+
+  private static final Logger logger = Logger.getLogger(MyNumber.class);
+
+  public static void main(String[] args) {
+    BasicConfigurator.configure();
     Consumer<Object> myMethod = n -> {
       if (n instanceof Integer) {
-        System.out.println("And this number - " + n + "!");
+        logger.info("And this number - " + n + "!");
       } else {
-        System.out.println("Hello Word and " + n + "!");
+        logger.info("Hello Word and " + n + "!");
         return;
       }
     };
