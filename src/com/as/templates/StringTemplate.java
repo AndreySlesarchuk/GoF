@@ -5,12 +5,15 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+/**
+ * Created by Slesarchuk on 10/19/2020.
+ */
+
 public class StringTemplate {
 
   static Logger log = Logger.getLogger(StringTemplate.class);
 
-  private static final String SMS_TEMPLATE =
-      "Уважаемый ${user.name}! Ваш заказ будет доставлен по адресу ${user.address}.";
+  private static final String SMS_TEMPLATE = "Уважаемый ${user.name}! Ваш заказ будет доставлен по адресу ${user.address}.";
 
   public static void main(String[] args) {
     Map<String, String> valuesMap = new HashMap<>();

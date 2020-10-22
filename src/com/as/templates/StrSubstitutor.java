@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 
 public class StrSubstitutor {
   private Map<String, String> map;
+
   private static final Pattern p = Pattern.compile("\\$\\{(.+?)\\}");
 
   public StrSubstitutor(Map<String, String> map) {
