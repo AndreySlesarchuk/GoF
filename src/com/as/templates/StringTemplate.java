@@ -13,12 +13,13 @@ public class StringTemplate {
 
   static Logger log = Logger.getLogger(StringTemplate.class);
 
-  private static final String SMS_TEMPLATE = "Уважаемый ${user.name}! Ваш заказ будет доставлен по адресу ${user.address}.";
+  private static final String SMS_TEMPLATE = "Уважаемый ${user.name}! Ваш заказ будет доставлен по адресу ${user.address}. ${date}";
 
   public static void main(String[] args) {
     Map<String, String> valuesMap = new HashMap<>();
     valuesMap.put("user.name", "Николай Петрович");
     valuesMap.put("user.address", "Минск, Волгоградская улица, дом 52");
+    valuesMap.put("date", "22 октября 2020 в 19:00");
     StrSubstitutor sub = new StrSubstitutor(valuesMap);
     String resolvedString = sub.replace(SMS_TEMPLATE);
     log.info(resolvedString);
