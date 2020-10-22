@@ -15,7 +15,7 @@ public class StringTemplate {
   public static void main(String[] args) {
     Map<String, String> valuesMap = new HashMap<>();
     valuesMap.put("user.name", "Николай Петрович");
-    valuesMap.put("user.address", "Москва, Ленинский проспект, дом 1");
+    valuesMap.put("user.address", "Минск, Волгоградская улица, дом 52");
     StrSubstitutor sub = new StrSubstitutor(valuesMap);
     String resolvedString = sub.replace(SMS_TEMPLATE);
     log.info(resolvedString);
