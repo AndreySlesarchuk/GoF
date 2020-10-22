@@ -1,11 +1,9 @@
 package com.as.templates;
 
-import com.as.expressions.lambda.MyNumber;
-import org.apache.commons.lang3.text.StrSubstitutor;
-import org.apache.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import org.apache.log4j.Logger;
 
 public class StringTemplate {
 
@@ -21,6 +19,5 @@ public class StringTemplate {
     StrSubstitutor sub = new StrSubstitutor(valuesMap);
     String resolvedString = sub.replace(SMS_TEMPLATE);
     log.info(resolvedString);
-    //System.out.println(resolvedString);
   }
 }
