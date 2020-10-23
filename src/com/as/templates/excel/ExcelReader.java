@@ -41,7 +41,6 @@ public class ExcelReader {
       }
       log.info("");
     }
-
   }
 
   private Workbook loadWorkbook(String filename) throws IOException {
