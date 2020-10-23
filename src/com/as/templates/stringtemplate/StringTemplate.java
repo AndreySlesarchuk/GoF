@@ -1,4 +1,4 @@
-package com.as.templates;
+package com.as.templates.stringtemplate;
 
 import java.util.HashMap;
 import java.util.Map;

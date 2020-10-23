@@ -1,4 +1,4 @@
-package com.as.templates;
+package com.as.templates.stringtemplate;
 
 import java.util.Map;
 import java.util.regex.Matcher;
