@@ -3,12 +3,8 @@ package com.as.templates.excel;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 
-import com.as.templates.stringtemplate.StrSubstitutor;
-import com.as.templates.stringtemplate.StringTemplate;
 import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -17,6 +13,9 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/**
+ * Created by Slesarchuk on 10/19/2020.
+ */
 public class ExcelReader {
 
   static Logger log = Logger.getLogger(ExcelReader.class);
@@ -30,13 +29,15 @@ public class ExcelReader {
   public void read(String filename) throws IOException {
     Workbook workbook = loadWorkbook(filename);
     Sheet sheet = workbook.getSheetAt(0);
-    Iterator<Row> rowIterator = sheet.iterator(); // sheet.rowIterator(); -- also works well
-    while(rowIterator.hasNext()){
+    Iterator<Row> rowIterator = sheet.iterator(); // sheet.rowIterator(); --
+                                                  // also works well
+    while (rowIterator.hasNext()) {
       Row row = rowIterator.next();
-      Iterator<Cell> cellIterator = row.iterator(); //row.cellIterator();-- also works well
-      while(cellIterator.hasNext()){
+      Iterator<Cell> cellIterator = row.iterator(); // row.cellIterator();--
+                                                    // also works well
+      while (cellIterator.hasNext()) {
         Cell cell = cellIterator.next();
-        log.info(cell.getStringCellValue()+"\t");
+        log.info(cell.getStringCellValue() + "\t");
       }
       log.info("");
     }
