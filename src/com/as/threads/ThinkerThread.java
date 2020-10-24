@@ -1,7 +1,5 @@
 package com.as.threads;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * Created by Andrey Slesarchuk on 10/24/2020.
  */
