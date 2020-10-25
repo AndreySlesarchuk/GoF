@@ -1,6 +1,5 @@
 package com.as.threads;
 
-import com.as.expressions.lambda.MyNumber;
 import org.apache.log4j.Logger;
 
 /**
