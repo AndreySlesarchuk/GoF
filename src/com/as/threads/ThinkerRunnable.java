@@ -1,5 +1,7 @@
 package com.as.threads;
 
+import org.apache.log4j.Logger;
+
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -7,11 +9,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThinkerRunnable implements Runnable {
 
+  static Logger log = Logger.getLogger(ThinkerRunnable.class);
+
   @Override
   public void run() {
     try {
       TimeUnit.SECONDS.sleep(3);
-      System.out.println("Второй поток завершён");
+      log.info("Второй поток завершён");
     }
     catch (InterruptedException e) {
       Thread.currentThread().interrupt();
@@ -20,6 +24,6 @@ public class ThinkerRunnable implements Runnable {
 
   public static void main(String[] args) {
     new Thread(new ThinkerRunnable()).start();
-    System.out.println("Основной поток завершён");
+    log.info("Основной поток завершён");
   }
 }
