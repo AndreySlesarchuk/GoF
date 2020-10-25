@@ -1,10 +1,16 @@
 package com.as.expressions.lambda;
+
+import org.apache.log4j.Logger;
+
 /**
  * Created by Slesarchuk on 10/19/2020.
  */
 public class MathExpression {
 
-  public static void main(String args[]) {
+  static Logger log = Logger.getLogger(MathExpression.class);
+
+  public static void main(String[] args) {
+
     MathExpression tester = new MathExpression();
 
     // with type declaration
@@ -14,23 +20,21 @@ public class MathExpression {
     MathOperation subtraction = (a, b) -> a - b;
 
     // with return statement along with curly braces
-    MathOperation multiplication = (int a, int b) -> {
-      return a * b;
-    };
+    MathOperation multiplication = (int a, int b) ->  a * b;
 
     // without return statement and without curly braces
     MathOperation division = (int a, int b) -> a / b;
 
-    System.out.println("10 + 5 = " + tester.operate(10, 5, addition));
-    System.out.println("10 - 5 = " + tester.operate(10, 5, subtraction));
-    System.out.println("10 x 5 = " + tester.operate(10, 5, multiplication));
-    System.out.println("10 / 5 = " + tester.operate(10, 5, division));
+    log.info("10 + 5 = " + tester.operate(10, 5, addition));
+    log.info("10 - 5 = " + tester.operate(10, 5, subtraction));
+    log.info("10 x 5 = " + tester.operate(10, 5, multiplication));
+    log.info("10 / 5 = " + tester.operate(10, 5, division));
 
     // without parenthesis
-    GreetingService greetService1 = message -> System.out.println("Hello " + message);
+    GreetingService greetService1 = message -> log.info("Hello " + message);
 
     // with parenthesis
-    GreetingService greetService2 = (message) -> System.out.println("Hello " + message);
+    GreetingService greetService2 = message -> log.info("Hello " + message);
 
     greetService1.sayMessage("Mike");
     greetService2.sayMessage("Andrey");
