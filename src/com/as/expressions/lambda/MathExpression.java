@@ -20,7 +20,10 @@ public class MathExpression {
     MathOperation subtraction = (a, b) -> a - b;
 
     // with return statement along with curly braces
-    MathOperation multiplication = (int a, int b) ->  a * b;
+    MathOperation multiplication = (int a, int b) ->  {
+      int n = a * b;
+      return n;
+    };
 
     // without return statement and without curly braces
     MathOperation division = (int a, int b) -> a / b;
