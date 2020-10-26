@@ -1,4 +1,4 @@
-package com.as.templates;
+package com.as.directories;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,7 +19,7 @@ public class DirectoryTest {
   public static void main(String[] args) {
     Path path = Paths.get("d:/__downloads");
     Long dirSize = getDirectorySizeJava8(path);
-    log.info(dirSize);
+    log.info("Directory " + path.toString() + " Size :" + new ConvertSize().getSize(dirSize));
   }
 
   // size of directory in bytes
