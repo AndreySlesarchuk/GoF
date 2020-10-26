@@ -2,27 +2,24 @@ package com.as.directories;
 
 public class ConvertSize {
 
-  public ConvertSize() {
-  }
+  public String getSize(Long sizeBytes) {
+    String cntSize;
 
-  public String getSize(Long size_bytes) {
-    String cnt_size;
+    long sizeKb = sizeBytes / 1024;
+    long sizeMb = sizeKb / 1024;
+    long sizeGb = sizeMb / 1024;
 
-    double size_kb = size_bytes / 1024;
-    double size_mb = size_kb / 1024;
-    double size_gb = size_mb / 1024;
-
-    if (size_gb > 0) {
-      cnt_size = size_gb + " GB";
+    if (sizeGb > 0) {
+      cntSize = sizeGb + " GB";
     }
     else
-      if (size_mb > 0) {
-        cnt_size = size_mb + " MB";
+      if (sizeMb > 0) {
+        cntSize = sizeMb + " MB";
       }
       else {
-        cnt_size = size_kb + " KB";
+        cntSize = sizeKb + " KB";
       }
-    return cnt_size;
+    return cntSize;
   }
 
 }
