@@ -1,5 +1,9 @@
 package com.as.directories;
 
+/**
+ * Created by Andrey Slesarchuk on 10/26/2020.
+ */
+
 public class ConvertSize {
 
   public String getSize(Long sizeBytes) {
