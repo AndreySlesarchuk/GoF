@@ -8,6 +8,10 @@ import java.util.stream.Stream;
 
 import org.apache.log4j.Logger;
 
+/**
+ * Created by Andrey Slesarchuk on 10/26/2020.
+ */
+
 public class DirectoryTest {
 
   static Logger log = Logger.getLogger(DirectoryTest.class);
@@ -17,7 +21,6 @@ public class DirectoryTest {
     Long dirSize = getDirectorySizeJava8(path);
     log.info(dirSize);
   }
-
 
   // size of directory in bytes
   public static long getDirectorySizeJava8(Path path) {
