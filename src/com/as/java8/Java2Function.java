@@ -10,9 +10,11 @@ public class Java2Function {
 
     Function<String, Integer> func = x -> x.length();
 
-    Integer apply = func.apply("andrey");   // 6
+    Function<Integer, Integer> func2 = x -> x * 2;
 
-    System.out.println(apply);
+    Integer result = func.andThen(func2).apply("andrey");   // 6
+
+    System.out.println(result);
 
   }
 }
