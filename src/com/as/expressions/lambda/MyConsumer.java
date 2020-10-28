@@ -3,7 +3,7 @@ package com.as.expressions.lambda;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 /**
- * Created by Slesarchuk on 10/19/2020.
+ * Created by Andrey Slesarchuk on 10/19/2020.
  */
 public class MyConsumer {
   public static void main(String[] args) {
