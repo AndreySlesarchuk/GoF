@@ -3,7 +3,7 @@ package com.as.expressions.lambda;
 import org.apache.log4j.Logger;
 
 /**
- * Created by Slesarchuk on 10/19/2020.
+ * Created by ANdrey Slesarchuk on 10/19/2020.
  */
 public class MathExpression {
 
