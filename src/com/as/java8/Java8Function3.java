@@ -28,6 +28,14 @@ public class Java8Function3 {
     System.out.println(map2);
   }
 
+  public <T, R> Map<T, R> convertListToPage(List<T> list, Function<T, R> func) {
+    Map<T, R> result = new HashMap<>();
+    for (T t : list) {
+      result.put(t, func.apply(t));
+    }
+    return result;
+  }
+
   public <T, R> Map<T, R> convertListToMap(List<T> list, Function<T, R> func) {
     Map<T, R> result = new HashMap<>();
     for (T t : list) {
