@@ -57,7 +57,6 @@ public class DirectoryTest {
   }
 
   public static long getDirectorySizeLegacy(File dir) {
-
     long length = 0;
     File[] files = dir.listFiles();
     if (files != null) {
@@ -69,7 +68,6 @@ public class DirectoryTest {
       }
     }
     return length;
-
   }
 
 }
