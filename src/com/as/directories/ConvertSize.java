@@ -9,7 +9,6 @@ public class ConvertSize {
     long sizeKb = sizeBytes / 1024;
     long sizeMb = sizeKb / 1024;
     long sizeGb = sizeMb / 1024;
-
     if (sizeGb > 0) {
       return sizeGb + " GB";
     }
