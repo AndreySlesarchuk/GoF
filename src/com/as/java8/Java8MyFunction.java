@@ -8,17 +8,14 @@ import java.util.function.*;
  */
 public class Java8MyFunction {
 
-  public interface Function<F, T> {
-    T apply(F from);
-  }
+  //public interface Function<F, T> {
+  //  T apply(F from);
+  //}
 
   public static void main(String[] args) {
 
-    Function<Integer, String> intToString = new Function<Integer, String>() {
-      @Override public String apply(Integer from) {
-        return from.toString();
-      }
-    };
+    //Function<Integer, String> intToString = new Function<Integer, String>() {
+    Function<Integer, String> intToString = from -> from.toString();
     System.out.println(intToString.apply(1024));
 
     // Predicate
