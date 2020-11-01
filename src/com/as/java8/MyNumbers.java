@@ -21,14 +21,16 @@ public class MyNumbers {
     numbers.add(9);
     numbers.add(1);
     MyNumbers myNumbers = new MyNumbers();
+
     System.out.println(myNumbers.joinNumbers(numbers));
 
-    myNumbers.joinNumbersF(numbers);
+    System.out.println(myNumbers.joinNumbersF(numbers));
 
   }
 
   Function<Integer, String> intToString = new Function<Integer, String>() {
-    @Override public String apply(Integer from) {
+    @Override
+    public String apply(Integer from) {
       return from.toString();
     }
   };
@@ -50,7 +52,7 @@ public class MyNumbers {
     return join(map(numbers, intToString), "|");
   }
 
-  public static <F, T> List<T> map(Collection<F> from, Function<? super F,? extends T> transformer) {
+  public static <F, T> List<T> map(Collection<F> from, Function<? super F, ? extends T> transformer) {
     ArrayList<T> result = new ArrayList<T>();
     for (F element : from)
       result.add(transformer.apply(element));
