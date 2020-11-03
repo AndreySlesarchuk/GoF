@@ -2,7 +2,9 @@ package com.as.java8.map;
 
 public class Hosting {
   private int Id;
+
   private String name;
+
   private long websites;
 
   public Hosting(int id, String name, long websites) {
@@ -35,7 +37,8 @@ public class Hosting {
     this.websites = websites;
   }
 
-  @Override public String toString() {
+  @Override
+  public String toString() {
     return "Hosting{" + "Id=" + Id + ", name='" + name + '\'' + ", websites=" + websites + '}';
   }
 }
