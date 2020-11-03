@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Created by Andrey Slesarchuk on 11/03/2020.
+ */
 public class TestListMap {
 
   public static void main(String[] args) {
