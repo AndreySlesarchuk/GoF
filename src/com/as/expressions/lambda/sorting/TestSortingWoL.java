@@ -16,11 +16,11 @@ public class TestSortingWoL {
 
     System.out.println("After Sort");
 
-    //lambda here!
-    listDevs.sort((Developer o1, Developer o2)->o1.getAge()-o2.getAge());
+    // lambda here!
+    listDevs.sort((Developer o1, Developer o2) -> o1.getAge() - o2.getAge());
 
-    //java 8 only, lambda also, to print the List
-    listDevs.forEach((developer)->System.out.println(developer));
+    // java 8 only, lambda also, to print the List
+    listDevs.forEach((developer) -> System.out.println(developer));
   }
 
   private static List<Developer> getDevelopers() {
@@ -35,6 +35,5 @@ public class TestSortingWoL {
     return result;
 
   }
-
 
 }
