@@ -37,4 +37,7 @@ public class Developer {
     return age;
   }
 
+  @Override public String toString() {
+    return "Developer{" + "name='" + name + '\'' + ", salary=" + salary + ", age=" + age + '}';
+  }
 }
