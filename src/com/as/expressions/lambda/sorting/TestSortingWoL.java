@@ -4,6 +4,9 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by Andrey Slesarchuk on 11/04/2020.
+ */
 public class TestSortingWoL {
   public static void main(String[] args) {
 
