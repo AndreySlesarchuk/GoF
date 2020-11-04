@@ -4,7 +4,9 @@ import java.math.BigDecimal;
 
 public class Developer {
   String name;
+
   BigDecimal salary;
+
   Integer age;
 
   public Developer(String name, BigDecimal salary, int age) {
@@ -37,7 +39,8 @@ public class Developer {
     return age;
   }
 
-  @Override public String toString() {
+  @Override
+  public String toString() {
     return "Developer{" + "name='" + name + '\'' + ", salary=" + salary + ", age=" + age + '}';
   }
 }

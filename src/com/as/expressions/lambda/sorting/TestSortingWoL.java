@@ -25,12 +25,12 @@ public class TestSortingWoL {
 
   private static List<Developer> getDevelopers() {
 
-    List<Developer> result = new ArrayList<Developer>();
+    List<Developer> result = new ArrayList<>();
 
-    result.add(new Developer("mkyong", new BigDecimal("70000"), 33));
-    result.add(new Developer("alvin", new BigDecimal("80000"), 20));
-    result.add(new Developer("jason", new BigDecimal("100000"), 10));
-    result.add(new Developer("iris", new BigDecimal("170000"), 55));
+    result.add(new Developer("mike", new BigDecimal("70000"), 33));
+    result.add(new Developer("alan", new BigDecimal("80000"), 20));
+    result.add(new Developer("jakie", new BigDecimal("100000"), 10));
+    result.add(new Developer("dan", new BigDecimal("170000"), 55));
 
     return result;
 
