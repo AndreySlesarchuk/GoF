@@ -9,6 +9,7 @@ import java.util.List;
 
 public class ArrayListVsLinkedList {
   private static final int MAX = 500000;
+
   String[] strings = maxArray();
 
   ////////////// ADD ALL ////////////////////////////////////////
@@ -20,7 +21,7 @@ public class ArrayListVsLinkedList {
 
     watch.start();
     arrayList.addAll(stringList);
-    watch.totalTime("Array List addAll() = ");//101,16719 Nanoseconds
+    watch.totalTime("Array List addAll() = ");// 101,16719 Nanoseconds
   }
 
   @Test
@@ -31,10 +32,10 @@ public class ArrayListVsLinkedList {
     watch.start();
     List<String> linkedList = new LinkedList<String>();
     linkedList.addAll(stringList);
-    watch.totalTime("Linked List addAll() = ");  //2623,29291 Nanoseconds
+    watch.totalTime("Linked List addAll() = "); // 2623,29291 Nanoseconds
   }
 
-  //Note: ArrayList is 26 time faster here than LinkedList for addAll()
+  // Note: ArrayList is 26 time faster here than LinkedList for addAll()
 
   ///////////////// INSERT /////////////////////////////////////////////
   @Test
@@ -45,7 +46,7 @@ public class ArrayListVsLinkedList {
     watch.start();
     for (String string : strings)
       arrayList.add(string);
-    watch.totalTime("Array List add() = ");//152,46840 Nanoseconds
+    watch.totalTime("Array List add() = ");// 152,46840 Nanoseconds
   }
 
   @Test
@@ -56,10 +57,10 @@ public class ArrayListVsLinkedList {
     watch.start();
     for (String string : strings)
       linkedList.add(string);
-    watch.totalTime("Linked List add() = ");  //966,62216 Nanoseconds
+    watch.totalTime("Linked List add() = "); // 966,62216 Nanoseconds
   }
 
-  //Note: ArrayList is 9 times faster than LinkedList for add sequentially
+  // Note: ArrayList is 9 times faster than LinkedList for add sequentially
 
   /////////////////// INSERT IN BETWEEN ///////////////////////////////////////
 
@@ -82,7 +83,7 @@ public class ArrayListVsLinkedList {
     arrayList.add(insertString2);
     arrayList.add(insertString3);
 
-    watch.totalTime("Array List add() = ");//36527
+    watch.totalTime("Array List add() = ");// 36527
   }
 
   @Test
@@ -104,13 +105,14 @@ public class ArrayListVsLinkedList {
     linkedList.add(insertString2);
     linkedList.add(insertString3);
 
-    watch.totalTime("Linked List add = ");//29193
+    watch.totalTime("Linked List add = ");// 29193
   }
 
+  // Note: LinkedList is 3000 nanosecond faster than ArrayList for insert
+  // randomly.
 
-  //Note: LinkedList is 3000 nanosecond faster than ArrayList for insert randomly.
-
-  ////////////////// DELETE //////////////////////////////////////////////////////
+  ////////////////// DELETE
+  ////////////////// //////////////////////////////////////////////////////
   @Test
   public void arrayListRemove() throws Exception {
     Watch watch = new Watch();
@@ -124,7 +126,7 @@ public class ArrayListVsLinkedList {
     watch.start();
     arrayList.remove(searchString0);
     arrayList.remove(searchString1);
-    watch.totalTime("Array List remove() = ");//20,56,9095 Nanoseconds
+    watch.totalTime("Array List remove() = ");// 20,56,9095 Nanoseconds
   }
 
   @Test
@@ -139,10 +141,11 @@ public class ArrayListVsLinkedList {
     watch.start();
     linkedList.remove(searchString0);
     linkedList.remove(searchString1);
-    watch.totalTime("Linked List remove = ");//20,45,4904 Nanoseconds
+    watch.totalTime("Linked List remove = ");// 20,45,4904 Nanoseconds
   }
 
-  //Note: LinkedList is 10 millisecond faster than ArrayList while removing item.
+  // Note: LinkedList is 10 millisecond faster than ArrayList while removing
+  // item.
 
   ///////////////////// SEARCH ///////////////////////////////////////////
   @Test
@@ -158,7 +161,7 @@ public class ArrayListVsLinkedList {
     watch.start();
     arrayList.contains(searchString0);
     arrayList.contains(searchString1);
-    watch.totalTime("Array List addAll() time = ");//186,15,704
+    watch.totalTime("Array List addAll() time = ");// 186,15,704
   }
 
   @Test
@@ -173,13 +176,14 @@ public class ArrayListVsLinkedList {
     watch.start();
     linkedList.contains(searchString0);
     linkedList.contains(searchString1);
-    watch.totalTime("Linked List addAll() time = ");//189,64,981
+    watch.totalTime("Linked List addAll() time = ");// 189,64,981
   }
 
-  //Note: Linked List is 500 Milliseconds faster than ArrayList
+  // Note: Linked List is 500 Milliseconds faster than ArrayList
 
   class Watch {
     private long startTime;
+
     private long endTime;
 
     public void start() {
@@ -195,7 +199,6 @@ public class ArrayListVsLinkedList {
       System.out.println(s + (endTime - startTime));
     }
   }
-
 
   private String[] maxArray() {
     String[] strings = new String[MAX];
