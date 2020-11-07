@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-
+/**
+ * Created by Andrey Slesarchuk on 11/07/2020.
+ */
 public class ArrayListVsLinkedList {
   private static final int MAX = 500000;
 
