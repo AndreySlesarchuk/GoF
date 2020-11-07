@@ -65,7 +65,6 @@ public class ArrayListVsLinkedList {
   // Note: ArrayList is 9 times faster than LinkedList for add sequentially
 
   /////////////////// INSERT IN BETWEEN ///////////////////////////////////////
-
   @Test
   public void arrayListInsertOne() {
     Watch watch = new Watch();
