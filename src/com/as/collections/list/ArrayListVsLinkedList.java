@@ -19,7 +19,7 @@ public class ArrayListVsLinkedList {
   public void arrayListAddAll() {
     Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
-    List<String> arrayList = new ArrayList<String>(MAX);
+    List<String> arrayList = new ArrayList<>(MAX);
 
     watch.start();
     arrayList.addAll(stringList);
@@ -27,12 +27,12 @@ public class ArrayListVsLinkedList {
   }
 
   @Test
-  public void linkedListAddAll() throws Exception {
+  public void linkedListAddAll() {
     Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
 
     watch.start();
-    List<String> linkedList = new LinkedList<String>();
+    List<String> linkedList = new LinkedList<>();
     linkedList.addAll(stringList);
     watch.totalTime("Linked List addAll() = "); // 2623,29291 Nanoseconds
   }
@@ -43,7 +43,7 @@ public class ArrayListVsLinkedList {
   @Test
   public void arrayListAdd() {
     Watch watch = new Watch();
-    List<String> arrayList = new ArrayList<String>(MAX);
+    List<String> arrayList = new ArrayList<>(MAX);
 
     watch.start();
     for (String string : strings)
@@ -55,7 +55,7 @@ public class ArrayListVsLinkedList {
   public void linkedListAdd() {
     Watch watch = new Watch();
 
-    List<String> linkedList = new LinkedList<String>();
+    List<String> linkedList = new LinkedList<>();
     watch.start();
     for (String string : strings)
       linkedList.add(string);
@@ -70,7 +70,7 @@ public class ArrayListVsLinkedList {
   public void arrayListInsertOne() {
     Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
-    List<String> arrayList = new ArrayList<String>(MAX + MAX / 10);
+    List<String> arrayList = new ArrayList<>(MAX + MAX / 10);
     arrayList.addAll(stringList);
 
     String insertString0 = getString(true, MAX / 2 + 10);
@@ -92,7 +92,7 @@ public class ArrayListVsLinkedList {
   public void linkedListInsertOne() {
     Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
-    List<String> linkedList = new LinkedList<String>();
+    List<String> linkedList = new LinkedList<>();
     linkedList.addAll(stringList);
 
     String insertString0 = getString(true, MAX / 2 + 10);
@@ -116,10 +116,10 @@ public class ArrayListVsLinkedList {
   ////////////////// DELETE
   ////////////////// //////////////////////////////////////////////////////
   @Test
-  public void arrayListRemove() throws Exception {
+  public void arrayListRemove() {
     Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
-    List<String> arrayList = new ArrayList<String>(MAX);
+    List<String> arrayList = new ArrayList<>(MAX);
 
     arrayList.addAll(stringList);
     String searchString0 = getString(true, MAX / 2 + 10);
@@ -132,9 +132,9 @@ public class ArrayListVsLinkedList {
   }
 
   @Test
-  public void linkedListRemove() throws Exception {
+  public void linkedListRemove() {
     Watch watch = new Watch();
-    List<String> linkedList = new LinkedList<String>();
+    List<String> linkedList = new LinkedList<>();
     linkedList.addAll(Arrays.asList(strings));
 
     String searchString0 = getString(true, MAX / 2 + 10);
@@ -151,10 +151,10 @@ public class ArrayListVsLinkedList {
 
   ///////////////////// SEARCH ///////////////////////////////////////////
   @Test
-  public void arrayListSearch() throws Exception {
+  public void arrayListSearch() {
     Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
-    List<String> arrayList = new ArrayList<String>(MAX);
+    List<String> arrayList = new ArrayList<>(MAX);
 
     arrayList.addAll(stringList);
     String searchString0 = getString(true, MAX / 2 + 10);
@@ -167,9 +167,9 @@ public class ArrayListVsLinkedList {
   }
 
   @Test
-  public void linkedListSearch() throws Exception {
+  public void linkedListSearch() {
     Watch watch = new Watch();
-    List<String> linkedList = new LinkedList<String>();
+    List<String> linkedList = new LinkedList<>();
     linkedList.addAll(Arrays.asList(strings));
 
     String searchString0 = getString(true, MAX / 2 + 10);
