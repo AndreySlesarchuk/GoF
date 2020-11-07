@@ -114,7 +114,6 @@ public class ArrayListVsLinkedList {
   // randomly.
 
   ////////////////// DELETE
-  ////////////////// //////////////////////////////////////////////////////
   @Test
   public void arrayListRemove() {
     Watch watch = new Watch();
