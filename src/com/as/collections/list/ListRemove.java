@@ -23,6 +23,7 @@ public class ListRemove {
     int valueToRemove = 1;
     //when
     removeAll1(list, valueToRemove);
+    System.out.println(list);
     //then
     //assertThat(list).isEqualTo(list(2, 3));
 
