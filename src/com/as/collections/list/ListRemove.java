@@ -17,13 +17,20 @@ public class ListRemove {
     }
   }
 
+  @Test
+  public static void removeAll2(List<Integer> list, int element) {
+    while (list.contains(element)) {
+      list.remove(element);
+    }
+  }
+
   public static void main(String[] args) {
     //given
     List<Integer> list = Arrays.asList(1, 2, 3);
     int valueToRemove = 1;
     //when
-    removeAll1(list, valueToRemove);
-    System.out.println(list);
+    removeAll2(list, valueToRemove);
+    System.out.println(list.toString());
     //then
     //assertThat(list).isEqualTo(list(2, 3));
 
