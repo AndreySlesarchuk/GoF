@@ -12,7 +12,7 @@ import org.junit.Test;
  */
 public class ListRemove {
 
-  public void removeAll1(List<Integer> list, int element) {
+  public static void removeAll1(List<Integer> list, int element) {
     while (list.contains(element)) {
       list.remove(element);
     }
@@ -20,28 +20,27 @@ public class ListRemove {
 
   public static void removeAll2(List<Integer> list, int element) {
     while (list.contains(element)) {
-      list.remove(element);
+      for (int i = 0; i < list.size(); i++) {
+        if (Objects.equals(element, list.get(i))) {
+          list.remove(i);
+          i--;
+        }
+      }
     }
   }
 
   public static void main(String[] args) {
+
     List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3));
     int valueToRemove = 1;
-    for (int i = 0; i < list.size(); i++) {
-      if (Objects.equals(valueToRemove, list.get(i))) {
-        list.remove(i);
-        i--;
-      }
-    }
-    //given
-    //List<Integer> list = Arrays.asList(1, 2, 3);
-    //int valueToRemove = 1;
 
-    //list.remove(valueToRemove);
+    removeAll1(list, valueToRemove);
+    System.out.println("First - " + list.toString());
 
-    //when
+    //list = new ArrayList<>(Arrays.asList(4, 5, 6));
     //removeAll2(list, valueToRemove);
-    System.out.println(list.toString());
+    //System.out.println("Second - " + list.toString());
+
     //then
     //assertThat(list).isEqualTo(list(2, 3));
 
