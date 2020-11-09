@@ -45,12 +45,13 @@ public class ListRemove {
 
   public static void main(String[] args) {
     Watch watch = new Watch();
-    List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+    List<Integer> list = new ArrayList<>(Arrays.asList(1,8,3,4,5,6,7,8,9,10));
     int valueToRemove = 8;
 
     removeFor(list, valueToRemove);
+    watch.totalTime("List removeFor time = "); //1 - 333 260 107 243 642, 2 - 333 674 579 937 381
     System.out.println("First - " + Optional.ofNullable(list.toString()).orElse("nothing"));
-    watch.totalTime("Linked List addAll() time = ");
+
 
     //list = new ArrayList<>(Arrays.asList(4, 5, 6));
     //removeAll2(list, valueToRemove);
