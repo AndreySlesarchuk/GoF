@@ -24,6 +24,38 @@ public class ListRemove {
     }
   }
 
+  public static void removeForEach(List<Integer> list, int element) {
+    for (Integer number : list) {
+      if (Objects.equals(number, element)) {
+        list.remove(number);
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    Watch watch = new Watch();
+    List<Integer> list1 = new ArrayList<>(Arrays.asList(1,8,3,4,5,6,7,8,9,10));
+    int valueToRemove = 8;
+
+    removeFor(list1, valueToRemove);
+    watch.totalTime("List removeFor time = "); //1 - 333 260 107 243 642, 2 - 333 674 579 937 381
+    System.out.println("First - " + Optional.ofNullable(list1.toString()).orElse("nothing"));
+
+
+    List<Integer> list2 = new ArrayList<>(Arrays.asList(1,8,3,4,5,6,7,8,9,10));
+    watch = new Watch();
+    removeForEach(list2, valueToRemove);
+    watch.totalTime("List removeForEach time = "); //1 - , 2 - 333 862 580 665 076
+    System.out.println("Second - " + Optional.ofNullable(list2.toString()).orElse("nothing"));
+
+    //list = new ArrayList<>(Arrays.asList(4, 5, 6));
+    //removeAll2(list, valueToRemove);
+    //System.out.println("Second - " + list.toString());
+
+    //then
+    //assertThat(list).isEqualTo(list(2, 3));
+  }
+
   static class Watch {
     private long startTime;
 
@@ -41,25 +73,6 @@ public class ListRemove {
       stop();
       System.out.println(s + (endTime - startTime));
     }
-  }
-
-  public static void main(String[] args) {
-    Watch watch = new Watch();
-    List<Integer> list = new ArrayList<>(Arrays.asList(1,8,3,4,5,6,7,8,9,10));
-    int valueToRemove = 8;
-
-    removeFor(list, valueToRemove);
-    watch.totalTime("List removeFor time = "); //1 - 333 260 107 243 642, 2 - 333 674 579 937 381
-    System.out.println("First - " + Optional.ofNullable(list.toString()).orElse("nothing"));
-
-
-    //list = new ArrayList<>(Arrays.asList(4, 5, 6));
-    //removeAll2(list, valueToRemove);
-    //System.out.println("Second - " + list.toString());
-
-    //then
-    //assertThat(list).isEqualTo(list(2, 3));
-
   }
 
 }
