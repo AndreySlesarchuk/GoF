@@ -1,9 +1,6 @@
 package com.as.collections.list;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 import org.junit.Test;
 
@@ -31,11 +28,14 @@ public class ListRemove {
 
   public static void main(String[] args) {
 
-    List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3));
+    List<Integer> list = new ArrayList<Integer>();
+    list.add(1);
+    list.add(2);
+    list.add(3);
     int valueToRemove = 1;
 
-    removeAll1(list, valueToRemove);
-    System.out.println("First - " + list.toString());
+    removeAll2(list, valueToRemove);
+    System.out.println("First - " + Optional.ofNullable(list.toString()).orElse("nothing"));
 
     //list = new ArrayList<>(Arrays.asList(4, 5, 6));
     //removeAll2(list, valueToRemove);
