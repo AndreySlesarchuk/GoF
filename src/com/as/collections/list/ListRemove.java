@@ -28,11 +28,8 @@ public class ListRemove {
 
   public static void main(String[] args) {
 
-    List<Integer> list = new ArrayList<Integer>();
-    list.add(1);
-    list.add(2);
-    list.add(3);
-    int valueToRemove = 1;
+    List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3));
+    int valueToRemove = 2;
 
     removeAll2(list, valueToRemove);
     System.out.println("First - " + Optional.ofNullable(list.toString()).orElse("nothing"));
