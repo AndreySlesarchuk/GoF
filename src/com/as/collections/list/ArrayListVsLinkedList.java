@@ -180,7 +180,6 @@ public class ArrayListVsLinkedList {
   }
 
   // Note: Linked List is 500 Milliseconds faster than ArrayList
-
   class Watch {
     private long startTime;
 
