@@ -182,13 +182,10 @@ public class ArrayListVsLinkedList {
   // Note: Linked List is 500 Milliseconds faster than ArrayList
   class Watch {
     private long startTime;
-
     private long endTime;
-
     public void start() {
       startTime = System.nanoTime();
     }
-
     private void stop() {
       endTime = System.nanoTime();
     }
