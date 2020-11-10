@@ -52,7 +52,6 @@ public class ListRemove {
     watch.totalTime("List removeFor time = "); //1 - 333 260 107 243 642, 2 - 333 674 579 937 381
     System.out.println("First - " + Optional.ofNullable(list1.toString()).orElse("nothing"));
 
-
     List<Integer> list2 = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
     watch = new Watch();
     removeWithIterator(list2, valueToRemove);
