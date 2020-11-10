@@ -146,7 +146,7 @@ public class ArrayListVsLinkedList {
 
   // Note: LinkedList is 10 millisecond faster than ArrayList while removing
   // item.
-
+  
   ///////////////////// SEARCH ///////////////////////////////////////////
   @Test
   public void arrayListSearch() {
@@ -189,7 +189,6 @@ public class ArrayListVsLinkedList {
     private void stop() {
       endTime = System.nanoTime();
     }
-
     public void totalTime(String s) {
       stop();
       System.out.println(s + (endTime - startTime));
