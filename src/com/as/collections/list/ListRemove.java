@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * Created by Andrey Slesarchuk on 11/08/2020.
+ * https://www.codeflow.site/ru/article/java-remove-value-from-list#
  */
 public class ListRemove {
 
@@ -24,7 +25,7 @@ public class ListRemove {
     }
   }
 
-  // ConcurrentModificationException
+  // Error ConcurrentModificationException
   public static void removeForEach(List<Integer> list, int element) {
     for (Integer number : list) {
       if (Objects.equals(number, element)) {
