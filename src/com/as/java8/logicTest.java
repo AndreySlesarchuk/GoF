@@ -6,10 +6,10 @@ package com.as.java8;
 public class logicTest {
 
   public static void main(String[] args) {
-
-    boolean isEmailExpired = true;
-    boolean password = true;
-    boolean hasEmailAmount = false;
+    // when email with password - message will be sent always
+    boolean password = false;
+    boolean isEmailExpired = false;
+    boolean hasEmailAmount = true;
 
     if (!password && (isEmailExpired || !hasEmailAmount)) {
       System.out.println("Email expired or ran out of balance");
