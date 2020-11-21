@@ -18,12 +18,7 @@ public class LogicTest {
 
   private String testEmailSending(boolean password, boolean isEmailExpired, boolean hasEmailAmount) {
     // when email with password - message will be sent always
-    if (!password && (isEmailExpired || !hasEmailAmount)) {
-      return "Email expired or ran out of balance";
-    }
-    else {
-      return "Email will be sent";
-    }
+    return (!password && (isEmailExpired || !hasEmailAmount)) ? "Email expired or ran out of balance" : "Email will be sent";
   }
 
 }
