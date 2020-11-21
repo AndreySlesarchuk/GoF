@@ -9,9 +9,9 @@ public class logicTest {
 
     boolean isEmailExpired = true;
     boolean password = true;
-    boolean hasEmailAmount = true;
+    boolean hasEmailAmount = false;
 
-    if ((isEmailExpired && !password) || (!hasEmailAmount)) {
+    if (!password && (isEmailExpired || !hasEmailAmount)) {
       System.out.println("Email expired or ran out of balance");
     }
     else {
