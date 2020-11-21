@@ -7,15 +7,16 @@ public class logicTest {
 
   public static void main(String[] args) {
 
-    if ((company.isEmailExpired()  && !password) || (!company.hasEmailAmount())) {
+    boolean isEmailExpired = true;
+    boolean password = true;
+    boolean hasEmailAmount = true;
+
+    if ((isEmailExpired && !password) || (!hasEmailAmount)) {
       System.out.println("Email expired or ran out of balance");
-    } else {
-      System.out.println(myNumbers.joinNumbersF(numbers));
     }
-
-
-
+    else {
+      System.out.println("Email with password will be sent");
+    }
   }
-
 
 }
