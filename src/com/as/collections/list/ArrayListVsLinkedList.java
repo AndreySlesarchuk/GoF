@@ -181,7 +181,7 @@ public class ArrayListVsLinkedList {
   }
 
   // Note: Linked List is 500 Milliseconds faster than ArrayList
-  
+
   private String[] maxArray() {
     String[] strings = new String[MAX];
     Boolean result = Boolean.TRUE;
