@@ -192,6 +192,7 @@ public class ArrayListVsLinkedList {
     public void totalTime(String s) {
       stop();
       System.out.println(s + (endTime - startTime));
+      System.out.println(s + ((endTime - startTime)/1000000));//Milliseconds
     }
   }
 
