@@ -59,8 +59,7 @@ public class ListRemove {
     watch.start();
     removeWithIterator(list2, valueToRemove);
     watch.totalTime("List removeWithIterator time = "); // 1 - 334 319 733 627
-                                                        // 250, 2 - 334 217 091
-                                                        // 777 304
+    
     System.out.println("Second - " + Optional.ofNullable(list2.toString()).orElse("nothing"));
 
     // list = new ArrayList<>(Arrays.asList(4, 5, 6));
