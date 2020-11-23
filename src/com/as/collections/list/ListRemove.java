@@ -49,14 +49,14 @@ public class ListRemove {
     Watch watch = new Watch();
     List<Integer> list1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
     int valueToRemove = 8;
-
+    watch.start();
     removeFor(list1, valueToRemove);
     watch.totalTime("List removeFor time = "); // 1 - 333 260 107 243 642, 2 -
                                                // 333 674 579 937 381
     System.out.println("First - " + Optional.ofNullable(list1.toString()).orElse("nothing"));
 
     List<Integer> list2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
-    watch = new Watch();
+    watch.start();
     removeWithIterator(list2, valueToRemove);
     watch.totalTime("List removeWithIterator time = "); // 1 - 334 319 733 627
                                                         // 250, 2 - 334 217 091

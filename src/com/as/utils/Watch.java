@@ -18,7 +18,7 @@ public class Watch {
 
   public void totalTime(String s) {
     stop();
-    System.out.println(s + (endTime - startTime));
-    // System.out.println(s + ((endTime - startTime) / 1000000));// Milliseconds
+    System.out.println(s + (endTime - startTime)); //Nanoseconds
+    //System.out.println(s + ((endTime - startTime) / 1000000));// Milliseconds
   }
 }
