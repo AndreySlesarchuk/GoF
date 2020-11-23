@@ -11,6 +11,8 @@ import java.util.List;
  * Created by Andrey Slesarchuk on 11/07/2020.
  */
 public class ArrayListVsLinkedList {
+
+  private Watch watch = new Watch();
   private static final int MAX = 500000;
 
   String[] strings = maxArray();
@@ -18,7 +20,7 @@ public class ArrayListVsLinkedList {
   ////////////// ADD ALL ////////////////////////////////////////
   @Test
   public void arrayListAddAll() {
-    Watch watch = new Watch();
+
     List<String> stringList = Arrays.asList(strings);
     List<String> arrayList = new ArrayList<>(MAX);
 
@@ -29,9 +31,7 @@ public class ArrayListVsLinkedList {
 
   @Test
   public void linkedListAddAll() {
-    Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
-
     watch.start();
     List<String> linkedList = new LinkedList<>();
     linkedList.addAll(stringList);
@@ -43,9 +43,7 @@ public class ArrayListVsLinkedList {
   ///////////////// INSERT /////////////////////////////////////////////
   @Test
   public void arrayListAdd() {
-    Watch watch = new Watch();
     List<String> arrayList = new ArrayList<>(MAX);
-
     watch.start();
     for (String string : strings)
       arrayList.add(string);
@@ -54,8 +52,6 @@ public class ArrayListVsLinkedList {
 
   @Test
   public void linkedListAdd() {
-    Watch watch = new Watch();
-
     List<String> linkedList = new LinkedList<>();
     watch.start();
     for (String string : strings)
@@ -68,7 +64,6 @@ public class ArrayListVsLinkedList {
   /////////////////// INSERT IN BETWEEN ///////////////////////////////////////
   @Test
   public void arrayListInsertOne() {
-    Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
     List<String> arrayList = new ArrayList<>(MAX + MAX / 10);
     arrayList.addAll(stringList);
@@ -77,14 +72,11 @@ public class ArrayListVsLinkedList {
     String insertString1 = getString(true, MAX / 2 + 20);
     String insertString2 = getString(true, MAX / 2 + 30);
     String insertString3 = getString(true, MAX / 2 + 40);
-
     watch.start();
-
     arrayList.add(insertString0);
     arrayList.add(insertString1);
     arrayList.add(insertString2);
     arrayList.add(insertString3);
-
     watch.totalTime("Array List add() = ");// 36527
   }
 
