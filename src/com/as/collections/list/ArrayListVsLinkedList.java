@@ -7,12 +7,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+
 /**
  * Created by Andrey Slesarchuk on 11/07/2020.
  */
 public class ArrayListVsLinkedList {
 
   private Watch watch = new Watch();
+
   private static final int MAX = 500000;
 
   String[] strings = maxArray();
@@ -20,7 +22,6 @@ public class ArrayListVsLinkedList {
   ////////////// ADD ALL ////////////////////////////////////////
   @Test
   public void arrayListAddAll() {
-
     List<String> stringList = Arrays.asList(strings);
     List<String> arrayList = new ArrayList<>(MAX);
 
@@ -67,7 +68,6 @@ public class ArrayListVsLinkedList {
     List<String> stringList = Arrays.asList(strings);
     List<String> arrayList = new ArrayList<>(MAX + MAX / 10);
     arrayList.addAll(stringList);
-
     String insertString0 = getString(true, MAX / 2 + 10);
     String insertString1 = getString(true, MAX / 2 + 20);
     String insertString2 = getString(true, MAX / 2 + 30);
@@ -82,7 +82,6 @@ public class ArrayListVsLinkedList {
 
   @Test
   public void linkedListInsertOne() {
-    Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
     List<String> linkedList = new LinkedList<>();
     linkedList.addAll(stringList);
@@ -91,14 +90,11 @@ public class ArrayListVsLinkedList {
     String insertString1 = getString(true, MAX / 2 + 20);
     String insertString2 = getString(true, MAX / 2 + 30);
     String insertString3 = getString(true, MAX / 2 + 40);
-
     watch.start();
-
     linkedList.add(insertString0);
     linkedList.add(insertString1);
     linkedList.add(insertString2);
     linkedList.add(insertString3);
-
     watch.totalTime("Linked List add = ");// 29193
   }
 
@@ -108,7 +104,6 @@ public class ArrayListVsLinkedList {
   ////////////////// DELETE
   @Test
   public void arrayListRemove() {
-    Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
     List<String> arrayList = new ArrayList<>(MAX);
 
@@ -124,13 +119,10 @@ public class ArrayListVsLinkedList {
 
   @Test
   public void linkedListRemove() {
-    Watch watch = new Watch();
     List<String> linkedList = new LinkedList<>();
     linkedList.addAll(Arrays.asList(strings));
-
     String searchString0 = getString(true, MAX / 2 + 10);
     String searchString1 = getString(true, MAX / 2 + 20);
-
     watch.start();
     linkedList.remove(searchString0);
     linkedList.remove(searchString1);
@@ -139,18 +131,15 @@ public class ArrayListVsLinkedList {
 
   // Note: LinkedList is 10 millisecond faster than ArrayList while removing
   // item.
-  
+
   ///////////////////// SEARCH ///////////////////////////////////////////
   @Test
   public void arrayListSearch() {
-    Watch watch = new Watch();
     List<String> stringList = Arrays.asList(strings);
     List<String> arrayList = new ArrayList<>(MAX);
-
     arrayList.addAll(stringList);
     String searchString0 = getString(true, MAX / 2 + 10);
     String searchString1 = getString(true, MAX / 2 + 20);
-
     watch.start();
     arrayList.contains(searchString0);
     arrayList.contains(searchString1);
@@ -159,13 +148,10 @@ public class ArrayListVsLinkedList {
 
   @Test
   public void linkedListSearch() {
-    Watch watch = new Watch();
     List<String> linkedList = new LinkedList<>();
     linkedList.addAll(Arrays.asList(strings));
-
     String searchString0 = getString(true, MAX / 2 + 10);
     String searchString1 = getString(true, MAX / 2 + 20);
-
     watch.start();
     linkedList.contains(searchString0);
     linkedList.contains(searchString1);
