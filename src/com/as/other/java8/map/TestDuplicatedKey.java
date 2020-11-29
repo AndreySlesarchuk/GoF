@@ -1,4 +1,4 @@
-package com.as.java8.map;
+package com.as.other.java8.map;
 
 import java.util.ArrayList;
 import java.util.List;

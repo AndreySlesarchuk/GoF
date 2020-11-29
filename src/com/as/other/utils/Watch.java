@@ -1,4 +1,4 @@
-package com.as.utils;
+package com.as.other.utils;
 
 /**
  * Created by Andrey Slesarchuk on 11/22/2020.

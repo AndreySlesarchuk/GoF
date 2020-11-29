@@ -1,4 +1,4 @@
-package com.as.java8.function;
+package com.as.other.java8.function;
 
 import java.util.ArrayList;
 import java.util.Collection;

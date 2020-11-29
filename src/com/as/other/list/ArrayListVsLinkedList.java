@@ -1,6 +1,6 @@
 package com.as.other.list;
 
-import com.as.utils.Watch;
+import com.as.other.utils.Watch;
 import org.junit.Test;
 
 import java.util.ArrayList;

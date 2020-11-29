@@ -1,4 +1,4 @@
-package com.as.java8.map;
+package com.as.other.java8.map;
 /**
  * Created by Andrey Slesarchuk on 11/03/2020.
  */

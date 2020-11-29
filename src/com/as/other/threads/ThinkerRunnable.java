@@ -1,4 +1,4 @@
-package com.as.threads;
+package com.as.other.threads;
 
 import org.apache.log4j.Logger;
 

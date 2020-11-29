@@ -1,4 +1,4 @@
-package com.as.java8;
+package com.as.other.java8;
 
 /**
  * Created by Andrey Slesarchuk on 11/21/2020.
