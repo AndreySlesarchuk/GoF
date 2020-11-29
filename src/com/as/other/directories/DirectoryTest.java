@@ -1,4 +1,4 @@
-package com.as.directories;
+package com.as.other.directories;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.as.directories;
+package com.as.other.directories;
 
 /**
  * Created by Andrey Slesarchuk on 10/26/2020.
