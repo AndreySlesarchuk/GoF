@@ -1,4 +1,4 @@
-package com.as.collections.list;
+package com.as.other.list;
 
 import com.as.utils.Watch;
 
