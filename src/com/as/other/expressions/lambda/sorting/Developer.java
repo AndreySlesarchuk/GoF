@@ -1,4 +1,4 @@
-package com.as.expressions.lambda.sorting;
+package com.as.other.expressions.lambda.sorting;
 
 import java.math.BigDecimal;
 

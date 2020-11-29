@@ -1,4 +1,4 @@
-package com.as.expressions.lambda;
+package com.as.other.expressions.lambda;
 
 import java.util.function.Consumer;
 import org.apache.log4j.Logger;
