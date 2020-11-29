@@ -1,4 +1,4 @@
-package com.as.templates.excel;
+package com.as.other.templates.excel;
 
 import java.io.File;
 import java.io.FileInputStream;
