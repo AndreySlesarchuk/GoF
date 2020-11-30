@@ -4,4 +4,5 @@ package com.as.gof.behavioral.visitor.items;
  */
 public interface ShoppingCartVisitor {
   int visit(Book book);
+  int visit(Fruit fruit);
 }
