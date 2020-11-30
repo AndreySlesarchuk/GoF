@@ -1,4 +1,5 @@
 package com.as.gof.behavioral.visitor.items;
+
 /**
  * Created by Andrey Slesarchuk on 11/30/2020.
  */
