@@ -24,22 +24,23 @@ public class ObservableClass {
 
   static class Subject extends Observable {
     // changed = true;
-    @Override protected synchronized void setChanged() {
+    @Override
+    protected synchronized void setChanged() {
       super.setChanged();
     }
   }
 }
 
 class Subscriber1 implements Observer {
-  @Override public void update(Observable o, Object arg) {
+  @Override
+  public void update(Observable o, Object arg) {
     System.out.println("s1 " + arg);
   }
 }
 
 class Subscriber2 implements Observer {
-  @Override public void update(Observable o, Object arg) {
+  @Override
+  public void update(Observable o, Object arg) {
     System.out.println("s2 " + arg);
   }
 }
-
-
