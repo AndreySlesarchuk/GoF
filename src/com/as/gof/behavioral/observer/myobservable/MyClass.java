@@ -2,6 +2,7 @@ package com.as.gof.behavioral.observer.myobservable;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Created by Andrey Slesarchuk on 07/26/2020.
  */
@@ -41,13 +42,15 @@ public class MyClass {
   }
 
   static class Subscriber1 implements MyObservable {
-    @Override public void callMe(String msg) {
+    @Override
+    public void callMe(String msg) {
       System.out.println("s1 " + msg);
     }
   }
 
   static class Subscriber2 implements MyObservable {
-    @Override public void callMe(String msg) {
+    @Override
+    public void callMe(String msg) {
       System.out.println("s2 " + msg);
     }
   }
