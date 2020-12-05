@@ -1,4 +1,5 @@
 package com.as.gof.behavioral.observer.chat;
+
 /**
  * Created by Andrey Slesarchuk on 07/26/2020.
  */
