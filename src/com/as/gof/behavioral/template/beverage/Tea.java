@@ -6,7 +6,7 @@ package com.as.gof.behavioral.template.beverage;
 public class Tea extends Beverage {
   @Override
   void startHook() {
-    System.out.println("wash the cup");
+    System.out.println("suggest dessert");
   }
 
   @Override
