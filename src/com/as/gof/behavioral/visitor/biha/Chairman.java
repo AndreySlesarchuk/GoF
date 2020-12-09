@@ -1,21 +1,22 @@
 package com.as.gof.behavioral.visitor.biha;
+
 /**
  * Created by Slesarchuk on 05/25/2020.
  */
 public class Chairman extends Head {
-    private int optionBonus;
+  private int optionBonus;
 
-    public int getOptionBonus() {
-        return optionBonus;
-    }
+  public int getOptionBonus() {
+    return optionBonus;
+  }
 
-    public void setOptionBonus(int optionBonus) {
-        this.optionBonus = optionBonus;
-    }
+  public void setOptionBonus(int optionBonus) {
+    this.optionBonus = optionBonus;
+  }
 
-    @Override
-    public void accept (Visitor visitor){
-        visitor.action(this);
-        acceptEmployees(visitor);
-    }
+  @Override
+  public void accept(Visitor visitor) {
+    visitor.action(this);
+    acceptEmployees(visitor);
+  }
 }
