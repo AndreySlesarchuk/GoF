@@ -1,39 +1,42 @@
 package com.as.gof.behavioral.visitor.biha;
+
 /**
  * Created by Slesarchuk on 05/25/2020.
  */
 public class Employee {
 
-    private String name;
-    private int salary;
-    private int incentiveBonus;
+  private String name;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  private int salary;
 
-    public String getName() {
-        return name;
-    }
+  private int incentiveBonus;
 
-    public int getSalary() {
-        return salary;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public int getIncentiveBonus() {
-        return incentiveBonus;
-    }
+  public int getSalary() {
+    return salary;
+  }
 
-    public void setIncentiveBonus(int incentiveBonus) {
-        this.incentiveBonus = incentiveBonus;
-    }
+  public void setSalary(int salary) {
+    this.salary = salary;
+  }
 
-    public void accept (Visitor visitor){
-        visitor.action(this);
-    }
+  public int getIncentiveBonus() {
+    return incentiveBonus;
+  }
+
+  public void setIncentiveBonus(int incentiveBonus) {
+    this.incentiveBonus = incentiveBonus;
+  }
+
+  public void accept(Visitor visitor) {
+    visitor.action(this);
+  }
 
 }
