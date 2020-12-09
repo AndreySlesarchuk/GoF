@@ -1,44 +1,47 @@
 package com.as.gof.behavioral.visitor.biha;
+
 /**
  * Created by Slesarchuk on 05/26/2020.
  */
 public class IncomeVisitor implements Visitor {
-    private int chairmanIncome;
-    private int headIncome;
-    private int employeeIncome;
+  private int chairmanIncome;
 
-    @Override
-    public void action(Employee employee){
-        employeeIncome += employee.getSalary() + employee.getIncentiveBonus();
-        System.out.println("IncomeVisitor.visit Employee " + employee.getName());
-    }
+  private int headIncome;
 
-    @Override
-    public void action(Head head){
-        headIncome += head.getSalary() + head.getAnnualBonus();
-        System.out.println("IncomeVisitor.visit Head " + head.getName());
-    }
+  private int employeeIncome;
 
-    @Override
-    public void action(Chairman chairman){
-        chairmanIncome += chairman.getSalary() + chairman.getAnnualBonus() + chairman.getOptionBonus();
-        System.out.println("IncomeVisitor.visit Chairman " + chairman.getName());
-    }
+  @Override
+  public void action(Employee employee) {
+    employeeIncome += employee.getSalary() + employee.getIncentiveBonus();
+    System.out.println("IncomeVisitor.visit Employee " + employee.getName());
+  }
 
-    public int getTotalIncome(){
-        return chairmanIncome + headIncome + employeeIncome;
-    }
+  @Override
+  public void action(Head head) {
+    headIncome += head.getSalary() + head.getAnnualBonus();
+    System.out.println("IncomeVisitor.visit Head " + head.getName());
+  }
 
-    public int getChairmanIncome() {
-        return chairmanIncome;
-    }
+  @Override
+  public void action(Chairman chairman) {
+    chairmanIncome += chairman.getSalary() + chairman.getAnnualBonus() + chairman.getOptionBonus();
+    System.out.println("IncomeVisitor.visit Chairman " + chairman.getName());
+  }
 
-    public int getHeadIncome() {
-        return headIncome;
-    }
+  public int getTotalIncome() {
+    return chairmanIncome + headIncome + employeeIncome;
+  }
 
-    public int getEmployeeIncome() {
-        return employeeIncome;
-    }
+  public int getChairmanIncome() {
+    return chairmanIncome;
+  }
+
+  public int getHeadIncome() {
+    return headIncome;
+  }
+
+  public int getEmployeeIncome() {
+    return employeeIncome;
+  }
 
 }
