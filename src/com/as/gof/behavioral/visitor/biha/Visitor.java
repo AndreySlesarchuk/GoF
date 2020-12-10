@@ -5,10 +5,10 @@ package com.as.gof.behavioral.visitor.biha;
  */
 public interface Visitor {
 
-    void action(Employee employee);
+  void action(Employee employee);
 
-    void action(Head head);
+  void action(Head head);
 
-    void action(Chairman chairman);
+  void action(Chairman chairman);
 
 }
