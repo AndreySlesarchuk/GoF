@@ -7,48 +7,50 @@ import java.util.List;
  * Created by Slesarchuk on 05/26/2020.
  */
 public class PersonnelVisitor implements Visitor {
-    private int employeeAmount;
-    private int headAmount;
-    private int chairmanAmount;
+  private int employeeAmount;
 
-    private List<String> personnel = new ArrayList<>();
+  private int headAmount;
 
-    @Override
-    public void action(Employee employee) {
-        employeeAmount++;
-        personnel.add( "Employee: " + employee.getName() );
-    }
+  private int chairmanAmount;
 
-    @Override
-    public void action(Head head) {
-        headAmount++;
-        personnel.add( "Head: " + head.getName() );
-    }
+  private List<String> personnel = new ArrayList<>();
 
-    @Override
-    public void action(Chairman chairman) {
-        chairmanAmount++;
-        personnel.add( "Chairman: " + chairman.getName() );
-    }
+  @Override
+  public void action(Employee employee) {
+    employeeAmount++;
+    personnel.add("Employee: " + employee.getName());
+  }
 
-    public int getEmployeeAmount() {
-        return employeeAmount;
-    }
+  @Override
+  public void action(Head head) {
+    headAmount++;
+    personnel.add("Head: " + head.getName());
+  }
 
-    public int getHeadAmount() {
-        return headAmount;
-    }
+  @Override
+  public void action(Chairman chairman) {
+    chairmanAmount++;
+    personnel.add("Chairman: " + chairman.getName());
+  }
 
-    public int getChairmanAmount() {
-        return chairmanAmount;
-    }
+  public int getEmployeeAmount() {
+    return employeeAmount;
+  }
 
-    public int getPersonnelAmount(){
-        return employeeAmount + headAmount + chairmanAmount;
-    }
+  public int getHeadAmount() {
+    return headAmount;
+  }
 
-    public String getPersonnel(){
-        return personnel.toString();
-    }
+  public int getChairmanAmount() {
+    return chairmanAmount;
+  }
+
+  public int getPersonnelAmount() {
+    return employeeAmount + headAmount + chairmanAmount;
+  }
+
+  public String getPersonnel() {
+    return personnel.toString();
+  }
 
 }
