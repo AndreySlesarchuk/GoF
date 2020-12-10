@@ -11,6 +11,7 @@ public class NewsAgency {
   private static final Logger LOGGER = Logger.getLogger(NewsAgency.class.getName());
 
   private String news;
+
   private List<Channel> channels = new ArrayList<>();
 
   public void addObserver(Channel channel) {
@@ -28,5 +29,5 @@ public class NewsAgency {
       channel.update(this.news);
     }
   }
-  
+
 }
