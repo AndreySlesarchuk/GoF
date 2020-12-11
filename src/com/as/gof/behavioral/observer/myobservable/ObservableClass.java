@@ -23,10 +23,9 @@ public class ObservableClass {
   }
 
   static class Subject extends Observable {
-    // changed = true;
     @Override
     protected synchronized void setChanged() {
-      super.setChanged();
+      super.setChanged(); // changed = true;
     }
   }
 }
