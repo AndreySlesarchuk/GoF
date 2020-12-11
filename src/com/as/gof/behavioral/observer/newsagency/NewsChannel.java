@@ -7,10 +7,11 @@ import java.util.logging.Logger;
  */
 public class NewsChannel implements Channel {
   private static final Logger LOGGER = Logger.getLogger(NewsChannel.class.getName());
+
   private String news;
 
-
-  @Override public void update(Object news) {
+  @Override
+  public void update(Object news) {
     this.setNews((String) news);
     LOGGER.info(String.format("%s get news: %s", this.getClass().getName(), news));
   }
