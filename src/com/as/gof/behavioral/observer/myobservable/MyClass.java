@@ -38,7 +38,6 @@ public class MyClass {
     public void notifySubscribers(String msg) {
       list.forEach(item -> item.callMe(msg));
     }
-
   }
 
   static class Subscriber1 implements MyObservable {
