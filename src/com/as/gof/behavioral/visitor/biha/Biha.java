@@ -11,7 +11,7 @@ public class Biha {
     Head head1 = createHead("Head1", 700, 1100);
     Head head2 = createHead("Head2", 500, 1000);
     Employee employee1 = createEmployee("Employee1", 330, 100);
-    Employee employee2 = createEmployee("Employee2", 200, 50);
+    Employee employee2 = createEmployee("Employee2", 220, 50);
     Employee employee3 = createEmployee("Employee3", 100, 25);
     Employee employee4 = createEmployee("Employee4", 50, 10);
     chairman.addEmployee(head1);
