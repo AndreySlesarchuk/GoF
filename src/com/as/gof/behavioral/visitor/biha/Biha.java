@@ -8,7 +8,7 @@ public class Biha {
 
   public void initialize() {
     chairman = createChairman();
-    Head head1 = createHead("Head1", 700, 1400);
+    Head head1 = createHead("Head1", 700, 1100);
     Head head2 = createHead("Head2", 500, 1000);
     Employee employee1 = createEmployee("Employee1", 300, 100);
     Employee employee2 = createEmployee("Employee2", 200, 50);
