@@ -10,7 +10,7 @@ public class Head extends Employee {
 
   private int annualBonus;
 
-  private List<Employee> employees = new ArrayList<Employee>();
+  private List<Employee> employees = new ArrayList<>();
 
   public int getAnnualBonus() {
     return annualBonus;
