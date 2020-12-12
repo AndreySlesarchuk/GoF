@@ -20,6 +20,7 @@ public class Biha {
     head1.addEmployee(employee2);
     head2.addEmployee(employee3);
     head2.addEmployee(employee4);
+    head1.getEmployees();
   }
 
   private Chairman createChairman() {
