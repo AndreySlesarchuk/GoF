@@ -2,9 +2,9 @@ package com.as.other.datetime;
 
 import com.as.gof.behavioral.visitor.biha.*;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.*;
 
 public class TimePeriod {
   private Date startTime;
@@ -28,9 +28,11 @@ public class TimePeriod {
     timePeriods.add(new TimePeriod("2020/12/04 09:00:00", "2020/12/04 09:30:00"));
 
     timePeriods.stream().forEach(tp-> System.out.println("-> : " + tp.toString()));
-    
-
-
+    Map<LocalDate, Integer> m1 = new HashMap<>();
+    for (TimePeriod tp: timePeriods) {
+      m1.put(tp.startTime.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), 1);
+    }
+    System.out.println("Количество дней: " + m1.size());
   }
 
   @Override public String toString() {
