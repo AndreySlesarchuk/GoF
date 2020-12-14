@@ -1,0 +1,39 @@
+package com.as.other.datetime;
+
+import com.as.gof.behavioral.visitor.biha.*;
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+public class TimePeriod {
+  private Date startTime;
+  private Date endTime;
+
+  public TimePeriod() {
+  }
+
+  public TimePeriod(String startTime, String endTime) {
+      this.startTime = new Date(startTime);
+      this.endTime = new Date(endTime);
+  }
+
+  public static void main(String[] args) {
+    Set<TimePeriod> timePeriods = new HashSet<>();
+    //timePeriods.add(new TimePeriod(1606802400000, 1606804200000))); //2020/12/01 09:00:00", "2020/12/01 09:30:00"));
+    timePeriods.add(new TimePeriod("2020/12/01 09:00:00", "2020/12/01 09:30:00"));
+    timePeriods.add(new TimePeriod("2020/12/01 10:00:00", "2020/12/01 10:30:00"));
+    timePeriods.add(new TimePeriod("2020/12/02 09:00:00", "2020/12/02 09:30:00"));
+    timePeriods.add(new TimePeriod("2020/12/03 09:00:00", "2020/12/03 09:30:00"));
+    timePeriods.add(new TimePeriod("2020/12/04 09:00:00", "2020/12/04 09:30:00"));
+
+    timePeriods.stream().forEach(tp-> System.out.println("-> : " + tp.toString()));
+    
+
+
+  }
+
+  @Override public String toString() {
+    return "TimePeriod{" + "startTime=" + startTime + ", endTime=" + endTime + '}';
+  }
+}
