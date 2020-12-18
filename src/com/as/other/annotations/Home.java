@@ -2,7 +2,6 @@ package com.as.other.annotations;
 
 import java.io.File;
 import java.lang.annotation.*;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
