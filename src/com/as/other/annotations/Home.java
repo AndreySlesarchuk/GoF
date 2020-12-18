@@ -6,6 +6,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by Andrey Slesarchuk on 12/18/2020.
+ */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @interface SuperCat {
@@ -55,9 +58,7 @@ public class Home {
       Annotation[] annotations = repoClass.getAnnotations();
       for (Annotation annotation : annotations) {
         if (annotation.annotationType() == SuperCat.class) {
-          Object obj = repoClass
-              .getDeclaredConstructor(Home.class)
-              .newInstance(home);
+          Object obj = repoClass.getDeclaredConstructor(Home.class).newInstance(home);
           superCats.add((Cat) obj);
         }
       }
