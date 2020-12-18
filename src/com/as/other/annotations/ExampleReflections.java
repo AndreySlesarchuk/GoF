@@ -6,6 +6,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * Created by Andrey Slesarchuk on 12/18/2020.
+ */
 public class ExampleReflections {
   private static final Home HOME = new Home();
 
@@ -13,8 +16,7 @@ public class ExampleReflections {
 
     Reflections reflections = new Reflections("com.as.other.annotations");
 
-    Set<Class<?>> superCats = reflections
-        .getTypesAnnotatedWith(SuperCat.class);
+    Set<Class<?>> superCats = reflections.getTypesAnnotatedWith(SuperCat.class);
 
     for (Class<?> clazz : superCats) {
       toCat(clazz).ifPresent(Cat::meow);
@@ -23,15 +25,9 @@ public class ExampleReflections {
 
   private static Optional<Cat> toCat(Class<?> clazz) {
     try {
-      return Optional.of((Cat) clazz
-          .getDeclaredConstructor(Home.class)
-          .newInstance(HOME)
-      );
-    } catch (InstantiationException |
-        IllegalAccessException |
-        InvocationTargetException |
-        NoSuchMethodException e)
-    {
+      return Optional.of((Cat) clazz.getDeclaredConstructor(Home.class).newInstance(HOME));
+    }
+    catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
       e.printStackTrace();
       return Optional.empty();
     }
