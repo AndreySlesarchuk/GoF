@@ -19,7 +19,8 @@ public class ArrayExamples {
     Solution solution = new Solution();
 
     watch.totalTime("Result1: " + solution.twoSum1(m1, t1) + " Time: ");
-    watch.totalTime("Result2: " + solution.twoSum2(m2, t2) + " Time: ");// 101,16719 Nanoseconds
+    watch.totalTime("Result2: " + solution.twoSum2(m2, t2) + " Time: ");
+    watch.totalTime("Result2: " + solution.twoSum1(m2, t2) + " Time: ");
   }
 
   class Solution {
