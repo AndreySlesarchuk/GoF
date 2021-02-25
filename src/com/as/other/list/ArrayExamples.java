@@ -5,7 +5,7 @@ import org.junit.Test;
 
 /**
  * Created by Andrey Slesarchuk on 02/25/2021.
- * 
+ *
  */
 public class ArrayExamples {
 
@@ -19,6 +19,7 @@ public class ArrayExamples {
     watch.start();
     Solution solution = new Solution();
 
+    watch.totalTime("Result reverse: " + solution.reverse(2048) + " Time: ");
     watch.totalTime("Result runningSum : " + solution.runningSum(m1) + " Time: ");
     watch.totalTime("Result1: " + solution.twoSum1(m1, t1) + " Time: ");
     watch.totalTime("Result2: " + solution.twoSum2(m2, t2) + " Time: ");
@@ -26,6 +27,18 @@ public class ArrayExamples {
   }
 
   class Solution {
+
+    public int reverse(int x) {
+      int rev = 0;
+      while (x != 0) {
+        int pop = x % 10;
+        x /= 10;
+        if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
+        if (rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
+        rev = rev * 10 + pop;
+      }
+      return rev;
+    }
 
     public int[] runningSum(int[] nums) {
       int[] output = new int[nums.length];
