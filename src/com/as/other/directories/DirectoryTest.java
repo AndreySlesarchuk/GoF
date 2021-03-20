@@ -53,7 +53,6 @@ public class DirectoryTest {
       System.out.printf("IO errors %s", e);
     }
     return size;
-
   }
 
   public static long getDirectorySizeLegacy(File dir) {
@@ -69,5 +68,4 @@ public class DirectoryTest {
     }
     return length;
   }
-
 }
