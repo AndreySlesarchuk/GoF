@@ -9,7 +9,6 @@ import java.util.*;
  */
 public class TimePeriod {
   private Date startTime;
-
   private Date endTime;
 
   public TimePeriod() {
