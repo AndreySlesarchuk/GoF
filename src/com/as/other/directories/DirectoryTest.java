@@ -21,7 +21,7 @@ public class DirectoryTest {
   public static void main(String[] args) {
     Path path = Paths.get("d:/__downloads");
     Long dirSize = getDirectorySizeJava8(path);
-    log.info("Directory " + path.toString() + " Size : " + new ConvertSize().getSize(dirSize)+ " - " + dirSize);
+    log.info("Directory " + path.toString() + " Size : " + new ConvertSize().getSize(dirSize) + " - " + dirSize);
 
     dirSize = FileUtils.sizeOfDirectory(path.toFile());
     log.info("(FileUtils) Directory " + path.toString() + " Size : " + new ConvertSize().getSize(dirSize) + " - " + dirSize);

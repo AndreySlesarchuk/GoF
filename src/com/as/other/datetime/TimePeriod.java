@@ -9,6 +9,7 @@ import java.util.*;
  */
 public class TimePeriod {
   private Date startTime;
+
   private Date endTime;
 
   public TimePeriod() {
@@ -21,8 +22,9 @@ public class TimePeriod {
 
   public static void main(String[] args) {
     Set<TimePeriod> timePeriods = new HashSet<>();
-    // timePeriods.add(new TimePeriod(1606802400000, 1606804200000))); // 2020/12/01 09:00:00", "2020/12/01 09:30:00"));
-    timePeriods.add(new TimePeriod("2020/12/01 09:00:00", "2020/12/01 09:30:00"));
+    // timePeriods.add(new TimePeriod(1606802400000, 1606804200000))); //
+    // 2020/12/01 09:00:00", "2020/12/01 09:30:00"));
+    timePeriods.add(new TimePeriod("2020/12/01 08:00:00", "2020/12/01 08:30:00"));
     timePeriods.add(new TimePeriod("2020/12/01 10:00:00", "2020/12/01 10:30:00"));
     timePeriods.add(new TimePeriod("2020/12/02 09:00:00", "2020/12/02 09:30:00"));
     timePeriods.add(new TimePeriod("2020/12/03 09:00:00", "2020/12/03 09:30:00"));
