@@ -20,7 +20,7 @@ public class MathExpression {
     MathOperation subtraction = (a, b) -> a - b;
 
     // with return statement along with curly braces
-    MathOperation multiplication = (int a, int b) ->  {
+    MathOperation multiplication = (int a, int b) -> {
       int n = a * b;
       return n;
     };
@@ -54,4 +54,5 @@ public class MathExpression {
   private int operate(int a, int b, MathOperation mathOperation) {
     return mathOperation.operation(a, b);
   }
+  
 }
