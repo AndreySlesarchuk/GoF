@@ -1,8 +1,8 @@
-package io.pivotal.literx;
+package com.as.other.reactives.literx;
 
-import io.pivotal.literx.domain.User;
-import io.pivotal.literx.repository.ReactiveRepository;
-import io.pivotal.literx.repository.ReactiveUserRepository;
+import com.as.other.reactives.literx.domain.User;
+import com.as.other.reactives.literx.repository.ReactiveRepository;
+import com.as.other.reactives.literx.repository.ReactiveUserRepository;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 

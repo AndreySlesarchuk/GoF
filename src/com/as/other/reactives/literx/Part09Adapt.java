@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package io.pivotal.literx;
+package com.as.other.reactives.literx;
 
 import java.util.concurrent.CompletableFuture;
 
-import io.pivotal.literx.domain.User;
+import com.as.other.reactives.literx.domain.User;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Single;
