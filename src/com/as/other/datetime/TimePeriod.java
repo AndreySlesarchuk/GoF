@@ -41,9 +41,12 @@ public class TimePeriod {
 
 
     String a1 = "01/10/2021";
+    String a2 = "13.10.2021";
     MyDateFormat myDateFormat = new MyDateFormat();
     String dateString = myDateFormat.getDateString(a1);
-    System.out.println("Нормализованная дата: " + dateString);
+    System.out.println("Нормализованная дата 1: " + dateString);
+    dateString = myDateFormat.getDateString(a2);
+    System.out.println("Нормализованная дата 2: " + dateString);
 
   }
 
