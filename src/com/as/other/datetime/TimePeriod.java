@@ -50,6 +50,9 @@ public class TimePeriod {
     a1 = "2021-02-13";
     dateString = myDateFormat.getDateFromString(a1);
     System.out.println("Нормализованная дата 3: " + dateString);
+    a1 = "3033-33-33";
+    dateString = myDateFormat.getDateFromString(a1);
+    System.out.println("Тестовая дата 4: " + dateString);
   }
 
   @Override
