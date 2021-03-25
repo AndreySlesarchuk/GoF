@@ -41,13 +41,18 @@ public class TimePeriod {
 
 
     String a1 = "01/10/2021";
-    String a2 = "13.10.2021";
     MyDateFormat myDateFormat = new MyDateFormat();
-    String dateString = myDateFormat.getDateString(a1);
+    Date dateString = myDateFormat.getDateFromString(a1);
     System.out.println("Нормализованная дата 1: " + dateString);
-    dateString = myDateFormat.getDateString(a2);
+    a1 = "13.10.2021";
+    dateString = myDateFormat.getDateFromString(a1);
     System.out.println("Нормализованная дата 2: " + dateString);
-
+    a1 = "2021-02-13";
+    dateString = myDateFormat.getDateFromString(a1);
+    System.out.println("Нормализованная дата 3: " + dateString);
+    a1 = "3033-33-33";
+    dateString = myDateFormat.getDateFromString(a1);
+    System.out.println("Тестовая дата 4: " + dateString);
   }
 
   @Override
