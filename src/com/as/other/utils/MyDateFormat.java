@@ -26,10 +26,7 @@ public class MyDateFormat {
   }
 
   private Date getDateFromValues(int[] ints) {
-    if (ints == null) {
-      return null;
-    }
-    Calendar calendar = new GregorianCalendar(ints[2], ints[1]-1, ints[0]);
+    Calendar calendar = new GregorianCalendar(ints[2], ints[1] - 1, ints[0]);
     return calendar.getTime();
   }
 
