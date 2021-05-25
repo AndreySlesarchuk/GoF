@@ -12,7 +12,6 @@ import java.util.List;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @interface SuperCat {
-
 }
 
 abstract class Cat {

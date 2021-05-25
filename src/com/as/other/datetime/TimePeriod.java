@@ -1,5 +1,7 @@
 package com.as.other.datetime;
 
+import com.as.other.utils.MyDateFormat;
+
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
@@ -22,8 +24,9 @@ public class TimePeriod {
 
   public static void main(String[] args) {
     Set<TimePeriod> timePeriods = new HashSet<>();
-    // timePeriods.add(new TimePeriod(1606802400000, 1606804200000))); // 2020/12/01 09:00:00", "2020/12/01 09:30:00"));
-    timePeriods.add(new TimePeriod("2020/12/01 09:00:00", "2020/12/01 09:30:00"));
+    // timePeriods.add(new TimePeriod(1606802400000, 1606804200000))); //
+    // 2020/12/01 09:00:00", "2020/12/01 09:30:00"));
+    timePeriods.add(new TimePeriod("2020/12/01 08:00:00", "2020/12/01 08:30:00"));
     timePeriods.add(new TimePeriod("2020/12/01 10:00:00", "2020/12/01 10:30:00"));
     timePeriods.add(new TimePeriod("2020/12/02 09:00:00", "2020/12/02 09:30:00"));
     timePeriods.add(new TimePeriod("2020/12/03 09:00:00", "2020/12/03 09:30:00"));
@@ -35,6 +38,21 @@ public class TimePeriod {
       m1.put(tp.startTime.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), 1);
     }
     System.out.println("Количество дней: " + m1.size());
+
+
+    String a1 = "01/10/2021";
+    MyDateFormat myDateFormat = new MyDateFormat();
+    Date dateString = myDateFormat.getDateFromString(a1);
+    System.out.println("Нормализованная дата 1: " + dateString);
+    a1 = "13.10.2021";
+    dateString = myDateFormat.getDateFromString(a1);
+    System.out.println("Нормализованная дата 2: " + dateString);
+    a1 = "2021-02-13";
+    dateString = myDateFormat.getDateFromString(a1);
+    System.out.println("Нормализованная дата 3: " + dateString);
+    a1 = "3033-33-33";
+    dateString = myDateFormat.getDateFromString(a1);
+    System.out.println("Тестовая дата 4: " + dateString);
   }
 
   @Override
