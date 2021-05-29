@@ -5,7 +5,7 @@ public class TestException {
     try {
       System.err.print("level 0");
       throw new RuntimeException();
-      System.err.print("level 1");
+      //System.err.print("level 1");
     }
     catch (Exception e) {
       // catch Exception ПЕРЕХВАТ RuntimeException
