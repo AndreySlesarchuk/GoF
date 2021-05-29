@@ -26,7 +26,7 @@ public class TestFinally {
       methodA();
     }
     catch (Exception e) {
-      System.out.println("Catch exception iinside main");
+      System.out.println("Catch exception inside main");
     }
     methodB();
   }
