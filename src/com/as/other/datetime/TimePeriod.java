@@ -1,5 +1,6 @@
 package com.as.other.datetime;
 
+import com.as.other.interfaces.C;
 import com.as.other.utils.MyDateFormat;
 
 import java.time.LocalDate;
@@ -53,6 +54,23 @@ public class TimePeriod {
     a1 = "3033-33-33";
     dateString = myDateFormat.getDateFromString(a1);
     System.out.println("Тестовая дата 4: " + dateString);
+
+    getMonthDays(new Date().getTime());
+
+  }
+
+  public static void getMonthDays(Long date) {
+    if (date != null) {
+      Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+      calendar.setTime(new Date(date));
+      calendar.set(Calendar.DAY_OF_MONTH, 1);
+      Date dateFrom = new Date(calendar.getTimeInMillis());
+      calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+      Date dateTo = new Date(calendar.getTimeInMillis());
+      System.out.println("Первый день месяца: " + dateFrom);
+      System.out.println("Последний день месяца: " + dateTo);
+    }
+
   }
 
   @Override
