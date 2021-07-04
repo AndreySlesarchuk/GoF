@@ -19,6 +19,15 @@ public class TestStrings {
     String[] resultArr = resultStr.split(splitter);
     System.out.println(resultStr);
     System.out.println(resultArr);
+
+    String doubleString = "1348.0";
+    String integerString = doubleString.substring(0, doubleString.length() - 2);
+    System.out.println("Integer number is: " + integerString);
+
+    Double d = Double.valueOf(doubleString);
+    int i = d.intValue();
+    System.out.println("Integer from double: " + i);
+
   }
 
   private String removeSpaces(String str) {
