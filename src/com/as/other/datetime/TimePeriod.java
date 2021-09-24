@@ -1,11 +1,13 @@
 package com.as.other.datetime;
 
-import com.as.other.interfaces.C;
-import com.as.other.utils.MyDateFormat;
-
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
+
+import com.as.other.utils.MyDateFormat;
 
 /**
  * Created by Andrey Slesarchuk on 12/14/2020.
@@ -23,7 +25,7 @@ public class TimePeriod {
     this.endTime = new Date(endTime);
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws ParseException {
     Set<TimePeriod> timePeriods = new HashSet<>();
     // timePeriods.add(new TimePeriod(1606802400000, 1606804200000))); //
     // 2020/12/01 09:00:00", "2020/12/01 09:30:00"));
@@ -54,6 +56,15 @@ public class TimePeriod {
     a1 = "3033-33-33";
     dateString = myDateFormat.getDateFromString(a1);
     System.out.println("Тестовая дата 4: " + dateString);
+
+    a1 = "Sat Aug 16 00:00:00 MSK 1969";
+    String parseFormat = "EEE MMM d HH:mm:ss z yyyy";
+    TimeZone timeZone = TimeZone.getTimeZone("MSK");
+    DateFormat format = new SimpleDateFormat(parseFormat);
+    format.setTimeZone(timeZone);
+    Date d1 = format.parse(a1);
+    System.out.println("Тестовая дата 5: " + d1);
+
 
     getMonthDays(new Date().getTime());
 
